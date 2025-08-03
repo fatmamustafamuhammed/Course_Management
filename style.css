@@ -1,0 +1,228 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #d0eaff; /* Light Blue Background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.crud {
+    width: 90%;
+    max-width: 1100px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Ensures horizontal scrolling if needed */
+}
+
+/* Header */
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.head h2 {
+    color: #0077cc;
+    letter-spacing: 1px;
+}
+
+.head p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Inputs & Textarea */
+input, textarea {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid #0077cc;
+    background: #f0f8ff;
+    margin: 6px 0;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Total */
+#total {
+    background: #0077cc;
+    padding: 8px 6px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+#total::before {
+    content: "Total: ";
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: #0077cc;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* Search Buttons */
+.btnSearch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnSearch button {
+    width: 48%;
+}
+
+.btnSearch button:hover {
+    background: #005fa3;
+}
+
+/* Table Container for Responsiveness */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+/* Styled table */
+table {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: #f0f8ff;
+    border: 2px solid #004080; /* Dark blue outer border */
+    border-radius: 8px;
+    overflow: hidden;
+    outline-style: solid;
+    outline-color: #0077cc;
+}
+
+/* Table headers */
+table th {
+    background: #0077cc;
+    color: white;
+    padding: 11px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 2px solid #005fa3; /* Darker blue borders */
+}
+
+/* Table cells */
+th, td {
+    padding: 12px;
+    border: 2px solid #0077cc; /* Clear blue borders */
+}
+
+/* Alternating row colors */
+table tr:nth-child(even) {
+    background: #e6f2ff;
+}
+
+/* Hover effect */
+table tr:hover {
+    background: #d0eaff;
+}
+
+/* Delete All Button */
+#deleteAll {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    border: 1px solid #0077cc;
+    background-color: #f0f8ff;
+    color: #333;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .crud {
+        overflow-x: auto;
+    }
+
+    .table-responsive table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; /* Prevent table cells from wrapping */
+    }
+
+    th, td {
+        min-width: 120px; /* Set a minimum width for table cells */
+    }
+
+    /* Adjust button layout for smaller screens */
+    .btnSearch {
+        flex-direction: column;
+    }
+
+    .btnSearch button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .head h2 {
+        font-size: 20px;
+    }
+
+    .head p {
+        font-size: 12px;
+    }
+
+    input, textarea, button {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

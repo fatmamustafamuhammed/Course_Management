@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Course Management System">
+    <meta name="keywords" content="courses, management, education, online learning">
+    <meta name="author" content="Fatma Mustafa">
+    <link rel="icon" href="./images/online-lesson.png" type="image/x-icon">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Course Management</h2>
+            <p>Manage Courses Effectively</p>
+        </div>
+
+        <div class="inputs">
+            <input type="number" id="course-id" placeholder="Course ID">
+            <input type="text" id="title" placeholder="Course Title">
+            <input type="text" id="image" placeholder="Image URL">
+            <input type="text" id="category" placeholder="Category">
+            <input type="text" id="instructor" placeholder="Instructor Name">
+            <textarea id="description" placeholder="Course Description"></textarea>
+            <input type="number" id="price" placeholder="Price (if applicable)">
+            <input type="text" id="duration" placeholder="Duration">
+            <input type="text" id="video" placeholder="Video URL">
+            <input type="text" id="pdf" placeholder="PDF URL">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="Search" onkeyup="searchData(this.value)">
+                <div class="btnSearch">
+                    <button id="searchTitle" onclick="getSearchMode(this.id)">Search By Title</button>
+                    <button id="searchCategory" onclick="getSearchMode(this.id)">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Category</th>
+                    <th>Instructor</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Duration</th>
+                    <th>Video</th>
+                    <th>PDF</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
